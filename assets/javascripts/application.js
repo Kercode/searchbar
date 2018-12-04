@@ -1,6 +1,11 @@
 $(document).ready(function () {
+  // Je conserve la valeur initial du paragraphe
+  let baseContent = $('#content p').html();
   // Au moment du clic
-  $('#submit-button').click(function () {
+  $('#search-bar').keyup(function () {
+    // Je réinitialise mon paragraphe avant de faire le traitement
+    $('#content p').html(baseContent);
+
     // Je conserve la valeur de la barre de recherche
     let searchBarVal = $('#search-bar').val();
 
